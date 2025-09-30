@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingredients List</title>
+  </head>
+  <body>
+    <ul id="ingredients"></ul>
+    <script>
+      const ingredients = [
+        "eggs",
+        "milk",
+        "cheese",
+        "garlic",
+        "onion",
+        "kale",
+        "salt",
+        "pepper",
+      ];
+      const myLocation = {
+        city: {
+          id: 2643743,
+          name: "London",
+          coord: {
+            lon: -0.1258,
+            lat: 51.5085,
+          },
+          country: "GB",
+          population: 9820000,
+          timezone: 3600,
+        }
+      };
+      let listItems = ingredients
+        .map((singleIngredient) => `<li>${singleIngredient}</li>`)
+        .join(" ");
+      document.getElementById("ingredients").innerHTML = listItems;
+    </script>
+  </body>
+</html>
